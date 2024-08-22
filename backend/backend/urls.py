@@ -21,4 +21,5 @@ from nyc import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/daily/<int:zipcode>', views.daily, name='daily'),
+    path('api/weekly/<int:zipcode>', views.weekly, name='weekly'),
 ]

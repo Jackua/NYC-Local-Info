@@ -6,3 +6,7 @@ from helper import parse
 
 def daily(request, zipcode):
     return JsonResponse(parse.create_json(zipcode))
+
+
+def weekly(request, zipcode):
+    return JsonResponse(parse.create_json(zipcode, end_date=parse.get_nextweek()))
