@@ -58,7 +58,7 @@ def parse_public(start_date=today, end_date=today):
 
 
 def get_nextweek():
-    return date.today().replace(day=date.today().day + 7).strftime('%m/%d/%Y')
+    return date.today().replace(day=date.today().day + 6).strftime('%m/%d/%Y')
 
 
 def reformat_datetime(old_datetime, format):
