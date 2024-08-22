@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'nyc',
+    'helper',
     'requests',
     'dotenv',
 ]
