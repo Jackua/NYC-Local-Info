@@ -1,23 +1,25 @@
 import Events from "./Events";
 
-function WeeklyInfo(result) {
-  let datesObject = result[Object.keys(result)[0]];
+function Info({ result, frequency, name }) {
+  let datesObject = { result }[Object.keys({ result })[0]];
   let datesList = Object.keys(datesObject);
+
+  console.log(frequency);
   return (
-    <div className="WeeklyInfo">
+    <div className={`${frequency}Info`}>
       {datesList.map((date, key) => {
         let fieldNames = Object.keys(datesObject[date]);
         return (
           <div className="Day" key={key}>
             <h3>{date}</h3>
             <p>
-              {fieldNames[0]} : {datesObject[date][fieldNames[0]]["status"]}
+              {fieldNames[0]} : {datesObject[date][fieldNames[0]][{ name }]}
             </p>
             <p>
-              {fieldNames[1]} : {datesObject[date][fieldNames[1]]["status"]}
+              {fieldNames[1]} : {datesObject[date][fieldNames[1]][{ name }]}
             </p>
             <p>
-              {fieldNames[2]} : {datesObject[date][fieldNames[2]]["status"]}
+              {fieldNames[2]} : {datesObject[date][fieldNames[2]][{ name }]}
             </p>
             <hr></hr>
             <p>Events Near You:</p>
@@ -33,4 +35,4 @@ function WeeklyInfo(result) {
   );
 }
 
-export default WeeklyInfo;
+export default Info;
