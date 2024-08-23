@@ -1,5 +1,4 @@
 .App-header {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,7 +8,34 @@
 }
 
 .Form {
+  display: inline-block;
+}
+
+.Form > form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.Results {
+  display: flex;
+}
+
+.DailyInfo {
+  flex-grow: 1;
+  width: 0;
+  font-size: medium;
+  border: solid;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.Event {
+  border: dotted;
+  padding: 0px 10px 0px 10px;
+}
+
+.Event p {
+  margin: 0px;
+  font-size: small;
 }
