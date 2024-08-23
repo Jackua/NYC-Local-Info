@@ -1,6 +1,7 @@
 import "../App.css";
 import React from "react";
 import DailyInfo from "./DailyInfo";
+import WeeklyInfo from "./WeeklyInfo";
 
 class Form extends React.Component {
   constructor(props) {
@@ -32,6 +33,8 @@ class Form extends React.Component {
   CreateInfoDisplay() {
     if (Object.keys(this.state.result).length == 1) {
       return <DailyInfo result={this.state.result} />;
+    } else if (Object.keys(this.state.result).length > 1) {
+      return <WeeklyInfo result={this.state.result} />;
     }
   }
 

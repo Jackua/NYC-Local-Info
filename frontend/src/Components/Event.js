@@ -1,7 +1,6 @@
-function Event({ eventInfo, key }) {
-  console.log(eventInfo);
+function Event({ eventInfo, index }) {
   return (
-    <div key={key} className="Event">
+    <div key={index} className="Event">
       <p>Name: {eventInfo["shortName"]}</p>
       <p>Address: {eventInfo["address"]}</p>
       <p>Time: {eventInfo["time"]}</p>

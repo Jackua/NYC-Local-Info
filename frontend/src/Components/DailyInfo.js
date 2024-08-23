@@ -18,7 +18,11 @@ function DailyInfo(result) {
       </p>
       <hr></hr>
       <p>Events Near You:</p>
-      {info["event"] !== undefined && <Events events={info["event"]} />}
+      {info["event"] !== undefined ? (
+        <Events events={info["event"]} />
+      ) : (
+        <p className="Event">"No Events Happening"</p>
+      )}
     </div>
   );
 }
