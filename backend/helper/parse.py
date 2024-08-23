@@ -18,8 +18,8 @@ def create_json(zipcode, start_date=today, end_date=today):
     public_dict = parse_public(start_date, end_date)
 
     for dt in public_dict:
-        public_dict[dt]['event'] = event_dict[dt]
-    print(public_dict)
+        if dt in event_dict:
+            public_dict[dt]['event'] = event_dict[dt]
 
     return public_dict
 
@@ -65,4 +65,4 @@ def reformat_datetime(old_datetime, format):
     return datetime.strptime(old_datetime, format).date().strftime('%m/%d/%Y')
 
 
-print(keys['Key-Event'])
+create_json(11219)
