@@ -36,7 +36,10 @@ def parse_event(zipcode, start_date=today, end_date=today):
         if dt not in events_dict:
             events_dict[dt] = []
         events_dict[dt].append(
-            {'name': item['name'], 'address': item['address'], 'time': item['timePart']})
+            {'name': item['name'],
+             'address': item['address'],
+             'time': item['timePart'],
+             'shortName': item['shortDesc']})
 
     return events_dict
 
@@ -52,7 +55,8 @@ def parse_public(start_date=today, end_date=today):
         if dt not in public_dict:
             public_dict[dt] = {}
         for item in day['items']:
-            public_dict[dt][item['type']] = item['details']
+            public_dict[dt][item['type']] = {
+                'details': item['details'], 'status': item['status']}
 
     return public_dict
 
