@@ -6,8 +6,8 @@ class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      zipcode: "10001",
-      frequency: "daily",
+      zipcode: "",
+      frequency: "",
       result: {},
     };
 
