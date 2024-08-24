@@ -36,5 +36,12 @@ Clone the repository:
 Once both the backend and frontend servers are running, open your browser and navigate to http://localhost:3000.
 Enter a valid NYC ZIP code and select either Daily or Weekly then click get info.
 
+## Attribution
+
+This project uses data provided by the City of New York through its official APIs:
+
+- [NYC Events Calendar API](https://api-portal.nyc.gov/api-details#api=event-calendar)
+- [NYC 311 Public API](https://api-portal.nyc.gov/api-details#api=nyc-311-public-api)
+
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
